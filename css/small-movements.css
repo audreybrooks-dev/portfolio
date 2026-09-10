@@ -1,0 +1,158 @@
+/****************************************************************************************  
+ * Small Movements
+ * ------------------------------------------------------------------------------------
+ * This script contains css animations to apply to elements
+ *    - 
+ *    - 
+ *    - 
+ * 
+***************************************************************************************/
+:root {
+    --wave-text-start:  0px; 
+    --wave-text-end:    21px; 
+}
+
+
+
+
+
+
+
+/******************************************** 
+ * CLASS: Rotations
+ * ------------------------------------------
+ *    - rotate-right-on-hover
+ *    - rotate-left-on-hover
+ *    - rotateX-on-hover
+ *    - rotateY-on-hover
+ * 
+********************************************/
+
+/*    Right    */
+.rotate-right-on-hover {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.rotate-right-on-hover:hover {
+    transform: rotate(45deg);
+}
+
+
+
+/*    Left    */
+.rotate-left-on-hover {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.rotate-left-on-hover:hover {
+    transform: rotate(-45deg);
+}
+
+
+
+/*  X Axis   */
+.rotate-X-on-hover {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.rotate-X-on-hover:hover {
+    transform: rotateX(25deg);
+}
+
+
+
+/*  Y Axis   */
+.rotate-Y-on-hover {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.rotate-Y-on-hover:hover {
+    transform: rotateY(360deg);
+}
+
+
+
+
+/******************************************** 
+ * CLASS: Growth/Shrink 
+ * ------------------------------------------
+ * 
+ * 
+ * 
+ * 
+********************************************/
+
+
+/*  enlarge   */
+.enlarge-on-hover {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.enlarge-on-hover:hover {
+    transform: rotateY(25deg);
+}
+
+
+
+/*  shrink   */
+.shrink-on-hover {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.shrink-on-hover:hover {
+    transform: rotateY(25deg);
+}
+
+
+
+
+
+
+/******************************************** 
+ * CLASS: Growth/Shrink 
+ * ------------------------------------------
+ * 
+ * 
+        margin-top: 0%;
+ *         margin-top: -20%; 
+ * 
+********************************************/
+
+
+.animated-wobble-text { 
+    display: flex; 
+    list-style: none;
+    justify-content: center;
+    align-items: space-between;
+    width: 140%;
+}
+ 
+@keyframes animate-wobble {
+
+    0%, 100% {
+        transform: translateY(55px);
+    }
+
+
+    50% {
+        transform: translateY(35px);
+    }
+}
+
+@keyframes animate-wave {
+
+    0%, 100% {
+        transform: translateY(var(--wave-text-start));
+    }
+
+
+    50% {
+        transform: translateY(var(--wave-text-end));
+    }
+}

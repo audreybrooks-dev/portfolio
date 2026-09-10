@@ -1,0 +1,216 @@
+/****************************************************************************************
+ * This CSS script file contains style info for the headers, paragraphs, and other texts
+ *  
+ * Tutorials:   -> 
+ *              ->  
+ *
+ *
+ * IDS we're working with:
+ *
+ * Classes we're working with: 
+ *                          
+ *    
+ * 
+ * @author: Audrey Brooks
+****************************************************************************************/
+
+:root {
+    --ani-wobble-delay-odd: 0.22s; 
+    --ani-wobble-delay-even: 0.3s; 
+
+}
+
+
+
+
+
+/******************************************** 
+ * BASIC RESET
+********************************************/
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/******************************************** 
+ * Headers and Paragraphs
+********************************************/
+h1 {
+    font-family: starborn, Frighted, Arial, Helvetica, sans-serif;
+      
+}
+h2 {
+    font-family: starborn, Frighted, Arial, Helvetica, sans-serif;         
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1vw;     
+    font-family: "consolas", sans-serif;
+}
+
+
+
+
+
+
+/******************************************** 
+ * CLASS: section headers and paragraphs
+*******************************************
+*/
+.section h1 {
+    /*                  Min,    Pref,   Max    */
+    font-size:   clamp( 1.4rem,  3.5rem,    5rem );
+    margin-bottom: 1rem;
+}
+
+.section h2 {
+    /*                   Min,     Pref,    Max    */
+    font-size:   clamp( 0.15vw,  2.75rem,  90px );
+    margin-top:  clamp( 1.5rem,   2.75rem,    2.85rem );
+}
+
+.section h3 {
+    font-family: Arial, starborn, Frighted, Helvetica, sans-serif; 
+    /*                  Min,     Pref,    Max    */       
+    font-size:   clamp( 0.95rem,   1.5rem,  2rem );
+    margin-top:  clamp( 0.6rem,   0.95rem,    1.2rem );
+    margin-bottom:  clamp( 0.2rem,   0.55rem,    0.6rem );
+}
+
+.section p {
+    max-width: 650px;
+
+    font-size:   clamp( 0.75rem,   1.2rem,    2em );
+    margin-top: 1.25em;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif, 'Courier New', Courier, monospace;;      
+}
+
+
+.section-header span {
+    display: inline-block;
+
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    font-family: starborn, 'Courier New', Courier, monospace;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    -webkit-text-stroke: 2px white;
+}
+
+.section-header li {
+    list-style: none;
+}
+
+.section-header li span {
+    animation: animate-wave  2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+
+
+/******************************************** 
+ * CLASS: gradient-text
+********************************************/
+.transparent-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    -webkit-text-stroke: 4px white;
+}
+
+
+
+/******************************************** 
+ * CLASS: gradient-text
+ 
+    padding-right: 6em;
+    padding-left: 8em;
+    width: minmax(0.1rem, 12rem);
+********************************************/
+
+.welcome {
+    align-content: center;
+    
+
+    background-image: linear-gradient(
+        90deg,
+        #dd70be,
+        #a44ddd,
+        #607cd7,
+        #28cdf6
+    )  ;
+}
+
+
+.welcome ul {
+    display: inline-block;
+    position: relative;
+}
+
+.welcome ul::before  {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+
+    /* order in layering */
+    z-index: 0;
+}
+
+
+
+.welcome li {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    font-family: starborn, Frighted, Arial, Helvetica, sans-serif;
+}
+
+.welcome li span{
+    animation: animate-wobble 1.7s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+/******************************************** 
+.welcome ul li:nth-child(odd)  {   animation-delay: var(--ani-wobble-delay-odd);    }
+.welcome ul li:nth-child(even) {   animation-delay: var(--ani-wobble-delay-even);   }
+********************************************/
+
+
+/******************************************** 
+ * Notes: 
+ *      button {white-space: nowrap} <- prevents newline 
+ *
+ *      oklch(1,0,0); <- different way of encoding colors?  
+ *
+ *      rem > px, vw, etc., TODO: fix later
+ * 
+********************************************/

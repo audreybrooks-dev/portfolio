@@ -1,0 +1,22 @@
+/**********************************************************************
+ * Cursors 
+ * -----------------------------
+ * Properties: auto, default, none, help, context-menu (right click), pointer, progress, wait, cell, crosshair, text, alias, copy, move
+ * cursor: property name; 
+ * 
+**********************************************************************/
+
+
+/*******************************************************
+ * Cherry Blossom 
+ * -----------------------------------------------
+ * auto and default
+ * 
+ * src: https://www.cursors-4u.com/cursor/cherry-blossom 
+   *****************************************************/
+* { 
+    /*                   thumb       track               */
+    scrollbar-color: var(--pink) var(--dark-purple);
+    scrollbar-width: thin; /* auto || none  */
+    cursor: url('https://cdn.cursors-4u.net/previews/cherry-blossom-b8f658eb-64.webp') 16 16, auto !important;
+}

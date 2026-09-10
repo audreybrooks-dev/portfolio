@@ -1,0 +1,183 @@
+/****************************************************************************************** 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ *     Alternative Color Pallet #1 
+ *      --old-lace:   #FFF8E9; 
+ *      --grapefruit: #FE6D73;
+ *      --apricot:    #FFCB77;
+ *      --turquoise:  #24E5D2;
+ *      --cerulean:   #2574A7;
+ * 
+ * 
+ *     Alternative Color Pallet #2 
+ *      --lav-blush:     #FFEBED; 
+ *      --powder-blush:  #F6B6B7;
+ *      --muted-teal:    #A6C9B6;
+ *      --pacific-cyan:  #3E828E;
+ *      --dark-amethyst: #27153D;
+ * 
+ *  
+ * @author: Audrey Brooks
+******************************************************************************************/
+
+
+
+/******************************************** 
+ * Root Section
+ * 
+ * utilize var(--variable-name-here) to access these
+********************************************/
+:root {
+
+    /* Color Pallet Variables: */
+    --light-purple: #e8a9d7;
+    --purple:       #714c91;
+    --blue:         #7ec3e6;
+    --dark-blue:    #14315c;
+    --dark-purple:  #28193e;
+
+    /* Color Variable Assignments: */
+    --backround-color: var(--dark-purple);
+    --text-color:      var(--light-purple);
+    --card-color-1:    var(--dark-blue);
+    --card-color-2:    var(--purple);
+    --nav-color:       var(--dark-purple);
+
+    /* Font Variables: */
+    --font-size:  16px;
+
+
+    /* Border Variables: */
+    --border-radius: 8px;
+    --spacing:       20px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+
+#flex {
+    display: flex;
+}
+
+
+.page {
+
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer"
+    ;
+
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: var(--gap);
+}
+
+
+main {
+    grid-area: main;
+    background-color: var(--background-color);
+}
+
+
+#footer {
+    text-align: center;             /* this centers the footer text */
+    background-color: var(--card-color-1);
+    padding:    10px;
+}
+
+
+
+a {
+    text-decoration: none; 
+    color: black; 
+}
+
+
+
+
+/******************************************************** 
+ *  hidden scrollbar tutorial from dollcrds@youtube
+********************************************************/
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;                   /* remove scrollbar space */
+    background: transparent;    /* to make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+
+/******************************************************** 
+ *  highlight change tutorial from dollcrds@youtube
+********************************************************/
+::selection {
+    background: #f7abcf;       /* Change highlight background color */
+    color:      #FFFFFF;       /* Change highlight text color */
+}
+
+
+
+
+/******************************************** 
+ * 
+********************************************/
+body {
+
+    background-color: var(--background-color);
+    /* background-image: url(/images/bg-sunset.jpg); */
+    background-attachment: fixed;
+    background-repeat: none;
+
+    overflow: hidden;
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.section {
+    font-size: var(--font-size);
+    border-width:7px;
+    border-style:solid;  
+    border-image: url("https://foollovers.com/mat/baf/flower/fl32-005-d.gif") 7 fill round;      
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    background-color: #14315c;
+}

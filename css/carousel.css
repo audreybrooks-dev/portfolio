@@ -1,0 +1,155 @@
+/******************************************************************
+ * Carousel CSS file
+ * ---------------------------------------------------------------
+ * Contains all css code for carousels used in website
+ * 
+ * tutorials:   - https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2
+ *              - 
+ ******************************************************************/
+
+
+
+
+
+/****************************************/
+/* Container                            */
+/****************************************/
+.card-container {
+    /*            Min,   Pref,   Max    */
+    display: flex;
+    width: 100%;
+}
+
+
+/****************************************/
+/* Card wrapper                         */
+/****************************************/
+.card-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.card-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.card-list .skill-category {
+    width: 100%;
+    text-align: center;
+    /*                Min,     Pref,    Max    */
+    font-size: clamp( 1.25vw,  1.75em,  2.6rem );
+    padding-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-radius: 2px;
+}
+
+
+.slide {
+    min-width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-list .card {
+    /*                Min,     Pref,     Max    */
+    display: block;
+    background-color: var(--mid-color-3);
+    padding: 4px 18px;
+    margin: 10px;
+    border-radius: 16px;
+    height:  fit-content;
+    justify-content: center;
+    align-items: center;
+    /*                     Min,   Pref,   Max    */
+    padding-bottom: clamp( 5vw,   6.5vw,  7.6vw );
+    text-decoration: none;
+}
+
+
+
+.card-list {
+    list-style: none;
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1.75rem;
+    padding-inline: 15%;
+}
+
+
+
+/****************************************/
+/* Card                                 */
+/****************************************/
+.card {
+    /* Card is 90% of the carousel window */
+    flex: 0 0 90%;
+    scroll-snap-align: center;
+}
+
+/****************************************/
+/* Card expansion                       */
+/****************************************/
+.card-expanded {
+    /*   Sizing:   */
+    min-height: 75vh;
+    width: 90%;
+
+    /*   Flex Box:   */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    align-content: center; 
+
+    /*   Margins:   */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+/****************************************/
+/* BUTTON STUFF HERE                    */
+/****************************************/
+.carousel-button {
+    /*   Sizing   */
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+
+    /*   placement   */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    /*   border   */
+    border: none;
+    border-radius: 50%;
+
+    /*   font / "button size"   */
+    font-size: 1.25rem;
+
+    /*   Color   */
+    background-color: var(--bg-color-2);
+    color: var(--txt-color-3);
+
+    /*   Animation stuff   */
+    transition: opacity 0.2s ease,
+                transform 0.25s ease;
+
+}
+.carousel-button:hover:not(:disabled) {
+    transform: scale(1.11);
+}
+
+.carousel-button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+

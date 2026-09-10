@@ -1,0 +1,308 @@
+/****************************************************************************************
+ * This CSS script file contains style info for the title and navigation bar of my site
+ *  
+ * Tutorials:   ->  
+ *              ->  
+ *
+ * IDS we're working with:      - navbar        = the title and navigation links both go uner here
+ *                              - navbar-title  = title of website on upper left corner
+ *                              - navbar-nav    = navigation links to spots in page
+ *                              - navbar-button = the hamburger button
+ *
+ * Classes we're working with:  - navbar-link = links found in navigation bar
+ *                          
+ *    
+ * 
+ * @author: Audrey Brooks
+****************************************************************************************/
+
+
+/******************************************** 
+ * Root Section
+********************************************/
+:root {
+
+    /* Color Pallet Variables: */
+    --pink:         #f18bde;
+    --blue:         #7ec3e6;
+    --dark-blue:    #14315c;
+    --purple:       #623785;
+    --dark-purple:  #2d193e;
+
+    /* Font Variables: */
+    --font-size:  16px;
+
+
+
+    /* Navigation Variables: */
+    --nav-text-color:        var(--pink);
+    --nav-hover-color:       var(--purple);
+    --burger-button-color:   var(--pink);
+    --nav-init-color:        var(--dark-purple);
+    --nav-scrolled-color:    var(--dark-blue);
+
+    --navbar-height: 80px;
+
+
+    --sidebar-bg-color: rgba(64, 35, 100, 0.825);
+}
+
+/******************************************** 
+ *  BASIC RESET
+********************************************/
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh; 
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/******************************************** 
+ * NAVIGATION BAR
+********************************************-/
+.navbar {
+
+
+    background-color: var(--nav-init-color);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.18);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+
+    z-index: 1000;
+
+    transition:
+        nav-scrolled-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+
+/* Navbar appearance after scrolling *-/
+.navbar.scrolled {
+    background-color:  var(--dark-blue);
+}
+
+
+
+
+
+
+/******************************************** 
+ * NAVIGATION TITLE 
+.navbar-title {
+    color: var(--nav-text-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+********************************************/
+
+
+
+/******************************************** 
+ * NAVIGATION 
+ * ------------------------------------------
+ * Tutorial: Coding2Go
+ * 
+ * 
+********************************************/
+nav {
+    position: fixed;
+    width: 100%;
+    /*  View  */
+    z-index: 999;
+}
+
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    height: var(--navbar-height);
+}
+
+.navbar  {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.18);
+    background-color: var(--nav-init-color);
+    transition: 
+        background-color 0.5s ease;
+}
+
+/* Title of page */
+.navbar li:first-child {
+    margin-right: auto;
+
+    font-family: starborn, Frighted, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.navbar-link {
+    background-color: var(--nav-init-color);
+    transition: 
+        background-color 0.6s ease;
+}
+
+.navbar-title {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-link,
+.navbar-link,
+.navbar-title {
+    color: var( --nav-text-color );
+    height: var(--navbar-height);
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    padding: 0 25px;
+    transition: 
+        color 0.5s ease,
+        background-color 0.4s ease;
+}
+
+
+/* change background color to show response */
+.navbar a:hover {
+    background-color: var(--nav-hover-color);
+    transform: scale(1.2);
+    transform: translateY(5%);
+}
+
+/* change background color to show response */
+.navbar-sidebar a:hover {
+    background-color: var(--nav-hover-color);
+    transform: scale(1.2);
+    transform: translateY(5%);
+}
+
+
+
+
+/*********************************************
+ * Navigation Sidebar
+ *********************************************/
+/*   Menu/Hamburger Button   */
+.menu-button {
+    height: var(--navbar-height);
+    fill: var(--nav-text-color);
+    display: none;
+    transition: 
+        fill 0.5s ease;
+}
+
+
+
+.navbar-sidebar {
+    /*  Positioning  */
+    position: fixed;
+    top: 0;
+    right: 0; 
+    height: 100vh;
+    width: 300px;
+
+    /*  View  */
+    z-index: 999;
+
+    /*  Styling  */
+    background-color: var(--sidebar-bg-color);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 3px 10px rgba(0, 0, 0, 0.18);
+
+    /*  Flexbox  */
+    display: none;
+    flex-direction: column;
+    align-items:  flex-start;
+    justify-content: flex-start;
+}
+
+
+.navbar-sidebar li {
+    width: 100%;
+}
+
+.navbar-sidebar a {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+/*   X Button in sidebar  */
+.navbar-X {
+    justify-content: flex-end;
+    fill: var(--nav-text-color);
+}
+
+
+
+
+
+
+/******************************************** 
+ * Responsive Tablet View 
+ ********************************************
+ * min = 767px
+ * max = 991px  
+ *   
+ *******************************************/
+@media (max-width: 865px) {
+
+    /* Hide navigation list */
+    .hide-on-mobile {
+        display: none; 
+    }
+
+
+    /* Show sidebar menu button */
+    .menu-button {
+        display: flex;    /* TODO: figure out why display: block; doesn't work out the way it does in tutorial */
+    }
+}
+
+
+
+
+/******************************************** 
+ * Responsive Mobile View
+ ********************************************
+ *   For mobile, we want side bar to span entire screen
+ *       -> generally, this is 400-ish pixels, but only shows up at 625px exactly for my screen
+ * 
+ * min = ?
+ * max = 768px  
+ *******************************************/
+@media (max-width: 625px) {
+
+    /* make sidebar span width of screen */
+    .navbar-sidebar {
+        width: 100%; 
+    }
+}

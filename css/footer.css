@@ -1,0 +1,172 @@
+/******************************************** 
+ * ID: footer:
+ * ------------------------------------------
+ * 
+ * 
+ * 
+********************************************/
+#footer {
+
+    /*   Color Schema:   */
+    background-color: var(--bg-color-1);
+    color: var(--footer-text-color);
+
+
+
+    /*   Flex Box:   */
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+
+    /*   Sizing:   */
+    height: 240px;
+    width: 100%;
+
+
+    /*   Other:   */
+    
+}
+
+
+
+.contact-links {
+    list-style: none;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+    margin-top: 7.55em;
+    margin-left: 0.8em;
+    gap: 1.25em;
+} 
+
+
+
+.contact-links a {
+    color:var(--mid-color-2);
+    border-radius: 15px;
+    
+    transition: 
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.contact-links a:visited {
+    text-decoration: none; 
+} 
+
+.contact-links a:active {
+    color:var(--txt-color-3);
+}
+
+
+.social-links:hover {
+    transform: scale(1.25); 
+}
+
+
+
+.social-links svg {
+    /*              Min,  Pref,   Max    */
+    height:  clamp( 2em,  2.25em,  3em );
+    width:   clamp( 2em,  2.25em,  3em );
+}
+
+
+
+
+/******************************************** 
+ * Back to top button configs
+ * ------------------------------------------
+ * 
+ * 
+ * 
+ * 
+********************************************/
+.footer-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width:  20px;
+    margin-top: 3.25em;
+}
+
+
+.back-to-top-icon {
+    display: flex;
+    text-decoration: none;
+
+    /*   Sizing:   */
+    padding: 5px;
+    border-radius: 42px;
+    margin-top: 1.5em;
+
+
+    color: var(--mid-color-2);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.5s ease,
+        color 0.5s ease;
+}
+
+
+.back-to-top-icon svg {
+    /*              Min,  Pref,   Max    */
+    height:  clamp( 3em,  3.2em,  4em );
+    width:   clamp( 3em,  3.2em,  4em );
+}
+
+
+
+.footer-button:hover .back-to-top-icon {
+    transform: scale(1.2); 
+    color: var(--bg-color-1);
+    background-color: var(--mid-color-2);
+}
+
+.footer-button .hover-text {
+    margin-top: 0.75em;
+}
+
+
+.footer-button:hover .hover-text {
+    top: 75px;
+    left: -68px;
+    width: 8em;
+    opacity: 1;
+    visibility: visible;
+    color: var(--bg-color-1);
+    background-color: var(--mid-color-2);
+    transform: translateY(-25%);
+    font-size: clamp( 0.75em,  0.95em,  4em );
+}
+
+
+
+
+/******************************************** 
+ * Copyright 
+ * ------------------------------------------
+ * Utilizes javascript: footer-functions.js
+ * keeps up to date via js
+ * 
+ * 
+********************************************/
+.copyright {
+    margin-top: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    margin-right: clamp( 0.35em,  1.4em,  2em );
+    color: var(--mid-color-2);
+    /*              Min,  Pref,   Max    */
+    font-size: clamp( 0.5em,  0.65em,  2em );
+    text-align: right;
+}

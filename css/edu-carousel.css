@@ -1,0 +1,171 @@
+/******************************************************************
+ * Carousel CSS file
+ * ---------------------------------------------------------------
+ * Contains all css code for carousels used in website
+ * 
+ * tutorials:   - https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2
+ *              - 
+ ******************************************************************/
+
+
+
+
+
+/****************************************/
+/* Container                            */
+/****************************************/
+.edu-carousel-container {
+    /*            Min,   Pref,   Max    */
+    display: flex;
+    min-height: 75vh;
+    align-items: center;
+    align-content: center; 
+}
+
+/****************************************/
+/* Card List                            */
+/****************************************/
+.edu-track-wrapper {
+    overflow: hidden;
+    width: 600px;
+    height: 430px;
+    border-radius: 18px;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    background-color: var(--mid-color-2);
+}
+
+.edu-card-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+/****************************************/
+/* Card List                            */
+/****************************************/
+/* Card titles                           */
+/* Card cards                            */
+/****************************************/
+.edu-card-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center; 
+    position: relative;
+    width: 100%;
+    padding-inline: 2%;
+
+    transition: transform 0.4s ease-in-out;
+}
+
+.edu-card-list .edu-card-title {
+    width: 100%;
+    text-align: center;
+    /*                Min,     Pref,    Max    */
+    font-size: clamp( 1.25vw,  1.75em,  2.6rem );
+    padding-bottom: 0.5rem;
+    border-bottom-style: solid; 
+    border-radius: 2px;
+}
+
+.edu-card-list .edu-card {
+    /*                Min,     Pref,     Max    */
+    background-color: var(--mid-color-1);
+    padding: 12px 28px;
+    margin: 20px;
+    border-radius: 16px;
+    width: 100%;
+    /*                     Min,   Pref,   Max    */
+    text-decoration: none;
+}
+
+
+
+
+/****************************************/
+/* Card                                 */
+/****************************************/
+.edu-card {
+    /* Card is 90% of the carousel window */
+    scroll-snap-align: center;
+    height: clamp( 12vw,   411px,  1200px );
+    text-align: center;
+}
+
+
+
+/****************************************/
+/* Card expansion                       */
+/****************************************/
+.edu-card-expanded {
+    /*   Sizing:   */
+    min-height: 75vh;
+    width: 100%;
+
+    /*   Flex Box:   */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    align-content: center; 
+
+    /*   Margins:   */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+/****************************************/
+/* BUTTON STUFF HERE                    */
+/****************************************/
+
+
+.button-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+
+}
+
+
+
+
+.edu-carousel-button {
+    /*   Sizing   */
+    flex-shrink: 0;
+    display: block;
+    width: 70px;
+    height: 70px;
+
+    /*   placement   */
+    margin-bottom: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    /*   border   */
+    border: none;
+    border-radius: 50%;
+
+    /*   font / "button size"   */
+    font-size: 1.25rem;
+
+    /*   Color   */
+    background-color: var(--bg-color-3);
+    color: var(--txt-color-3);
+
+    /*   Animation stuff   */
+    transition: opacity 0.2s ease,
+                transform 0.25s ease;
+
+}
+.edu-carousel-button:hover:not(:disabled) {
+    transform: scale(1.11);
+}
+
+.edu-carousel-button:disabled {
+    opacity: 0.2;
+    cursor: default;
+}

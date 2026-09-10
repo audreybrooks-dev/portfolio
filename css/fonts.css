@@ -1,0 +1,44 @@
+/****************************************************************************************
+ * This CSS script file contains links to fonts that are or will be used on this website 
+ *  
+ * Fonts from:  -> dollcrds @ youtube 
+ *              ->  
+ *              ->  
+ *
+ *
+ * @author: Audrey Brooks
+****************************************************************************************/
+@font-face {
+    font-family: kawaii stitch;
+    src: url(https://dl.dropbox.com/s/yjal3we9j6biyn5/Kawaii%20Stitch.ttf);
+}
+ 
+@font-face {
+    font-family: starborn;
+    src: url(https://dl.dropbox.com/s/l0541on0m5eqvdj/Starborn.ttf);
+}
+ 
+@font-face {
+    font-family: pixel;
+    src: url(https://dl.dropbox.com/s/kmhe7d3n18vdz5e/w95fa.woff?dl=0);
+}
+ 
+@font-face {
+    font-family: Frighted;
+    src: url(https://dl.dropbox.com/s/ct0s037q78sao3f/Frighted.ttf);
+}
+ 
+@font-face {
+    font-family: SakeMoru;
+    src: url(https://dl.dropbox.com/s/ktlx5w7t8gk42nb/SakeMoru-Regular.ttf);
+}
+ 
+@font-face {
+    font-family:'yipes';
+    src: url(https://dl.dropbox.com/s/qrdm3wived8sm66/Yipes.ttf);
+}
+ 
+@font-face {
+    font-family:'fenotype';
+    src: url(https://dl.dropbox.com/s/klo6yfrf62916qp/02.10FEN.TTF);
+}

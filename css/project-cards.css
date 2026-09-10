@@ -1,0 +1,66 @@
+/****************************************************************************************
+ * This CSS script file contains style info for the cards containing project descriptions
+ * and links. 
+ *  
+ * Tutorials:   ->  https://www.youtube.com/watch?v=APxt2mKOsss
+ *              ->  https://www.youtube.com/watch?v=s48ueIHpG7A
+ *              ->  https://www.youtube.com/watch?v=3T0gjtXRNC0
+ *
+ *
+ * IDs we're working with:
+ *
+ * Classes we're working with:  proj-card
+ *                              
+ *    
+ * 
+ * @author: Audrey Brooks
+****************************************************************************************/
+.proj-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    /*  4, 1fr  */
+    column-gap: 2em;
+    justify-content: center;
+}
+
+
+.proj-card {
+
+    /*  Stying  */
+    background-color: var(--purple); 
+    padding: 2em;
+    border: 1px solid var(--pink); 
+    border-radius: .4em;
+
+    /*  Grid stuff  */
+    display: grid;
+    justify-content: center;
+    grid-template-rows: subgrid;    /* adopt parent's grid 'view' */
+    grid-row: span 3;
+    gap: 0; 
+}
+
+.proj-card h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0; 
+}
+
+
+.card p {
+    text-align: center;
+    field-sizing: content;
+    margin: 1em 0; 
+    max-height: 12lh; /* this limits lines to 12 before adding a scroll bar */
+    resize: none;
+}
+
+
+
+.card button {
+    background-color: var(--pink);
+    border: none;
+    font-family: starborn, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 1.2em 2.5em; 
+    border-radius: .3em;
+}

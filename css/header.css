@@ -1,0 +1,21 @@
+
+
+/******************************************** 
+ * Header Styling
+********************************************/
+header {
+    grid-area: header;
+    background-color: var(--background-color);
+
+    height: 400px;
+    width: 100%;
+    background-color: #5e4e8c;    /* header color here! */
+
+
+    /* this is only for a background image! */
+    /* if you want to put images IN the header, 
+    you can add them directly to the <div id="header"></div> element! */
+    background-image: url(/images/bg-sunset.jpg);
+    background-size: 100%;
+    
+}
