@@ -15,11 +15,10 @@
 /* Container                            */
 /****************************************/
 .edu-carousel-container {
-    /*            Min,   Pref,   Max    */
     display: flex;
-    min-height: 75vh;
+    min-height: 50vh;
     align-items: center;
-    align-content: center; 
+    margin-left: 2rem;
 }
 
 /****************************************/
@@ -27,9 +26,9 @@
 /****************************************/
 .edu-track-wrapper {
     overflow: hidden;
-    width: 600px;
-    height: 430px;
-    border-radius: 18px;
+    width: 525px;
+    height: 400px;
+    border-radius: 16px;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
     background-color: var(--mid-color-2);
@@ -89,7 +88,7 @@
 .edu-card {
     /* Card is 90% of the carousel window */
     scroll-snap-align: center;
-    height: clamp( 12vw,   411px,  1200px );
+    height: clamp( 10vw,   351px,  70rem );
     text-align: center;
 }
 
@@ -150,7 +149,7 @@
     border-radius: 50%;
 
     /*   font / "button size"   */
-    font-size: 1.25rem;
+    font-size: 1.45rem;
 
     /*   Color   */
     background-color: var(--bg-color-3);
@@ -168,4 +167,54 @@
 .edu-carousel-button:disabled {
     opacity: 0.2;
     cursor: default;
+}
+
+
+
+
+
+
+/******************************************** 
+ * Responsive Tablet View 
+ ********************************************
+ * min = 767px
+ * max = 991px  
+ *   
+ *******************************************/
+@media (max-width: 865px) {
+
+    .education {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .edu-track-wrapper {
+        width: 505px;
+        height: 380px;
+    }
+
+    /* make buttons side by side */
+    .button-container {
+        display: flex; 
+        justify-content: center;
+        margin-top: 0.7rem;
+    }
+
+
+    /* Move buttons to below the carousel */
+    .edu-carousel-container {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        
+        margin-left: 0;
+    }
+
+    .edu-carousel-button {
+        
+        width: 60px;
+        height: 60px;
+    }
 }

@@ -40,7 +40,7 @@
     flex-wrap: wrap;
     
     margin-top: 7.55em;
-    margin-left: 0.8em;
+    margin-left: clamp( 0.1vw,  0.8em,  1rem );
     gap: 1.25em;
 } 
 
@@ -73,8 +73,8 @@
 
 .social-links svg {
     /*              Min,  Pref,   Max    */
-    height:  clamp( 2em,  2.25em,  3em );
-    width:   clamp( 2em,  2.25em,  3em );
+    height:  clamp( 3vw,  2.15rem,  4rem );
+    width:   clamp( 3vw,  2.15rem,  4rem );
 }
 
 
@@ -169,4 +169,28 @@
     /*              Min,  Pref,   Max    */
     font-size: clamp( 0.5em,  0.65em,  2em );
     text-align: right;
+}
+
+
+/******************************************** 
+ * Responsive Tablet View 
+ ********************************************
+ * min = 767px
+ * max = 991px  
+ *   
+ *******************************************/
+@media (max-width: 800px) {
+
+    .contact-buttons-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-button {
+        margin-top: 1.5em;
+    }
+    
+    .footer-button:hover .hover-text {
+        top: 70px;
+    }
+
 }

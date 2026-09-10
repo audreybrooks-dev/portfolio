@@ -96,7 +96,7 @@ hr {
  * 
  ******************************************************************/
 .section {
-    min-height: 105vh;
+    min-height: 100vh;
 
     /*   Flex Box:   */
     display: flex; 
@@ -127,16 +127,57 @@ hr {
  * 
 ********************************************/
 .welcome {
-    background-color: var(--about-bg-color);
-    color: var(--about-text-color);
 
-    /*   Text:   */
-
-
-
-    /*   Other:   */
-
+    align-content: center;
+    
+    background-image: linear-gradient(
+        90deg,
+        #dd70be,
+        #a44ddd,
+        #607cd7,
+        #28cdf6
+    )  ;
 }
+
+
+.welcome ul {
+    display: inline-block;
+    position: relative;
+}
+
+.welcome ul::before  {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+
+    /* order in layering */
+    z-index: 0;
+}
+
+
+
+.welcome li {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    font-family: starborn, Frighted, Arial, Helvetica, sans-serif;
+}
+
+.welcome li span{
+    animation: animate-wobble 1.7s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+/******************************************** 
+.welcome ul li:nth-child(odd)  {   animation-delay: var(--ani-wobble-delay-odd);    }
+.welcome ul li:nth-child(even) {   animation-delay: var(--ani-wobble-delay-even);   }
+********************************************/
+
 
 
 
@@ -210,9 +251,6 @@ hr {
 
 
 
-
-    /*   Other:   */
-    gap: 5rem;
     
 }
 
@@ -487,29 +525,35 @@ hr {
 }
 
 
+/*****************************/
+/*    Button Container       */
+/*****************************/
 .contact-buttons-container {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap:  clamp( 0.25em,   1.5em,  8rem );
+    gap:  clamp( 0.05em,   0.5em,  8rem );
 
     margin-top: 1.5em;
     margin-bottom: 2.25em;
 }
 
 
+/*****************************/
+/*       Buttons             */
+/*****************************/
 .contact-button {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    height: clamp( 0.15em,   6.5em,  25em );
-    width:  clamp( 0.5em,   8.15em,  28em );
+    height: clamp( 0.15vw,   5.5em,  15rem );
+    width:  clamp( 0.15vw,   7.5em,  17rem );
     padding: 20px;
-    color: var(--mid-color-3);
-    background-color: var(--bg-color-3);
+    color: var(--txt-color-1);
+    background-color: var(--bg-color-1);
     border-radius: 45px;
     border-style: solid;
     border-width: 0.3em;
@@ -533,16 +577,19 @@ hr {
     border-width: 0.15em;
 }
 
+/*****************************/
+/*      Button's Text        */
+/*****************************/
 .contact-button .contact-button-txt {
     display: inline-block;
     transform-style: preserve-3d;
 
     /*                  Min,     Pref,    Max    */      
-    padding: clamp( 0.05rem,   0.4rem,  5.5rem ); 
-    padding-right: clamp( 0.05em,   1em,  5.5em ); 
-    padding-left:  clamp( 0.05em,   1em,  5.5em ); 
+    padding: clamp( 0.05em,   0.4rem,  1.5rem ); 
+    padding-right: clamp( 0.05em,   1em,  3.5rem ); 
+    padding-left:  clamp( 0.05em,   1em,  3.5rem ); 
    /*  background-color: var(--bg-color-1); */  
-    font-size:   clamp( 0.35em,   0.75em,  2.25em );
+    font-size:   clamp( 2vw,   0.7em,  2.25rem );
     margin-top: 0.25em;
     margin-bottom: 0.1em;
     
@@ -553,11 +600,16 @@ hr {
 .contact-button-txt:hover {
     color: pink;
 }
+
+
+/*****************************/
+/*       Button's SVG        */
+/*****************************/
 .contact-button svg {
     border-radius: 25%;
 
-    height: clamp( 4.15em,   6em,  15rem );
-    width:  clamp( 4.15em,   6em,  15rem );
+    height: clamp( 4.15vw,   7em,  15rem );
+    width:  clamp( 4.15vw,   7em,  15rem );
     transition:
         color 0.5s ease,
         transform 0.75s ease-out;
@@ -566,4 +618,29 @@ hr {
 .contact-button svg:hover {
     transform: scale(1.03); 
     color: pink;
+}
+
+
+#contact-p {
+    font-size:   clamp( 5vw,   1.4rem,    1.75rem );
+    text-align: center;
+    margin-top: 0.25em;
+    margin-bottom: 0.1em;
+    
+}
+
+
+/******************************************** 
+ * Responsive Tablet View 
+ ********************************************
+ * min = 767px
+ * max = 991px  
+ *   
+ *******************************************/
+@media (max-width: 800px) {
+
+    .contact-buttons-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
