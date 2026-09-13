@@ -246,7 +246,7 @@ nav li {
  * max = 991px  
  *   
  *******************************************/
-@media (max-width: 865px) {
+@media (max-width: 991px) {
 
     /* Hide navigation list */
     .hide-on-mobile {
@@ -261,11 +261,8 @@ nav li {
     }
 
     .navbar-title {
-        margin-top: 0.05rem;
+        margin-top: 0.15rem;
         font-size: 1.15rem;
-    }
-    .navbar {
-        height: 69px;
     }
 }
 
@@ -281,7 +278,7 @@ nav li {
  * min = ?
  * max = 768px  
  *******************************************/
-@media (max-width: 625px) {
+@media (max-width: 768px ) {
 
     /* make sidebar span width of screen */
     .navbar-sidebar {

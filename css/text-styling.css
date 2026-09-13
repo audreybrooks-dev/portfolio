@@ -58,7 +58,7 @@ h2 {
 }
 
 p {
-    font-size: 1vw;     
+    font-size: 3vw;     
     font-family: "consolas", sans-serif;
 }
 
@@ -80,15 +80,15 @@ p {
 
 .section h2 {
     /*                 Min,   Pref,     Max    */
-    font-size:   clamp( 5vw,  2.15rem,  90px );
-    margin-top:  clamp( 5vw,  1.95rem,  2.5rem );
+    font-size:   clamp( 4.2vw,  2.75rem,  4.15rem );
+    margin-top:  clamp( 5.5vw,  1.95rem,  2.5rem );
 }
 
 
 .section h3 {
     font-family: Arial, starborn, Frighted, Helvetica, sans-serif; 
     /*                  Min,     Pref,    Max    */       
-    font-size:   clamp( 0.95rem,   1.5rem,  2rem );
+    font-size:   clamp( 2.35vw,   1.1rem,  1.6rem );
     margin-top:  clamp( 0.6rem,   0.95rem,    1.2rem );
     margin-bottom:  clamp( 0.2rem,   0.55rem,    0.6rem );
 }
@@ -97,7 +97,7 @@ p {
 .section p {
     max-width: 650px;
 
-    font-size:   clamp( 0.35vw,   1.0em,    2em );
+    font-size:   clamp( 2.35vw,   1.0rem,    5em );
     margin-top: 1.75rem;
     margin-bottom: 2rem;
     line-height: 1.7;
